@@ -365,6 +365,7 @@ void LittleVgl::InitThemeLabel() {
 
   lv_style_copy(&labelBigStyle, &prim);
   labelBigStyle.text.font = &jetbrains_mono_extrabold_compressed;
+  labelBigStyle.text.color = lv_color_hsv_to_rgb(180, 100, 100);
   LabelBigStyle = &(this->labelBigStyle);
 
   lv_style_copy(&sec, &bg);
