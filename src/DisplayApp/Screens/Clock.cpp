@@ -38,12 +38,16 @@ Clock::Clock(DisplayApp* app,
 
   bleIcon = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_text(bleIcon, Symbols::bluetooth);
-  lv_obj_align(bleIcon, batteryPlug, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+  lv_obj_align(bleIcon, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, 0);
 
 
   label_date = lv_label_create(lv_scr_act(), NULL);
 
   lv_obj_align(label_date, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, 60);
+                                             
+  dayofweekday = lv_label_create(lv_scr_act(), NULL);
+                                             
+  lv_obj_align_origo(dayofweekday, lv_scr_act(), LV_ALIGN_IN_TOP_MID, 0, 0);                                           
 
   label_time = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_style(label_time, LV_LABEL_STYLE_MAIN, LabelBigStyle);
@@ -145,7 +149,9 @@ bool Clock::Refresh() {
       char dateStr[22];
       sprintf(dateStr, "%s %d %s %d", DayOfWeekToString(dayOfWeek), day, MonthToString(month), year);
       lv_label_set_text(label_date, dateStr);
-
+      char weekdayStr[9];
+      sprintf(weekdayStr, "%s", DayofWeekToString(dayOfWeek));
+      lv_label_set_text(dayofweekday, weekdayStr);
 
       currentYear = year;
       currentMonth = month;
