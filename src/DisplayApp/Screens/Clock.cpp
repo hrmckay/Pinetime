@@ -150,7 +150,7 @@ bool Clock::Refresh() {
       sprintf(dateStr, "%s %d %s %d", DayOfWeekToString(dayOfWeek), day, MonthToString(month), year);
       lv_label_set_text(label_date, dateStr);
       char weekdayStr[9];
-      sprintf(weekdayStr, "%s", DayofWeekToString(dayOfWeek));
+      sprintf(weekdayStr, "%s", DayOfWeekToString(dayOfWeek));
       lv_label_set_text(dayofweekday, weekdayStr);
 
       currentYear = year;
