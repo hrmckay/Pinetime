@@ -38,12 +38,12 @@ Clock::Clock(DisplayApp* app,
 
   bleIcon = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_text(bleIcon, Symbols::bluetooth);
-  lv_obj_align(bleIcon, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, 0);
+  lv_obj_align(bleIcon, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, 60);
 
 
   label_date = lv_label_create(lv_scr_act(), NULL);
 
-  lv_obj_align(label_date, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, 60);
+  lv_obj_align(label_date, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, 60);
                                              
   dayofweekday = lv_label_create(lv_scr_act(), NULL);
                                              
@@ -147,7 +147,7 @@ bool Clock::Refresh() {
 
     if ((year != currentYear) || (month != currentMonth) || (dayOfWeek != currentDayOfWeek) || (day != currentDay)) {
       char dateStr[22];
-      sprintf(dateStr, "%s %d %s %d", DayOfWeekToString(dayOfWeek), day, MonthToString(month), year);
+      sprintf(dateStr, "%s %d", MonthToString(month), day);
       lv_label_set_text(label_date, dateStr);
       char weekdayStr[9];
       sprintf(weekdayStr, "%s", DayOfWeekToString(dayOfWeek));
@@ -203,18 +203,18 @@ char const *Clock::DaysString[] = {
 
 char const *Clock::MonthsString[] = {
         "",
-        "JAN",
-        "FEB",
-        "MAR",
-        "APR",
-        "MAY",
-        "JUN",
-        "JUL",
-        "AUG",
-        "SEP",
-        "OCT",
-        "NOV",
-        "DEC"
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
 };
 
 void Clock::OnObjectEvent(lv_obj_t *obj, lv_event_t event) {
