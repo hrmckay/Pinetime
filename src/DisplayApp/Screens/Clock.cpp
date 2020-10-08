@@ -45,11 +45,11 @@ Clock::Clock(DisplayApp* app,
 
   label_date = lv_label_create(lv_scr_act(), NULL);
 
-  lv_obj_align(label_date, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, 60);
+  lv_obj_align(label_date, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, -20, 60);
                                              
   dayofweekday = lv_label_create(lv_scr_act(), NULL);
                                              
-  lv_obj_align_origo(dayofweekday, lv_scr_act(), LV_ALIGN_IN_TOP_MID, 0, 0);                                           
+  lv_obj_align_origo(dayofweekday, lv_scr_act(), LV_ALIGN_IN_TOP_MID, 0, 10);                                           
 
   label_time = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_style(label_time, LV_LABEL_STYLE_MAIN, LabelBigStyle);
