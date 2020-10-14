@@ -45,7 +45,7 @@ Clock::Clock(DisplayApp* app,
 
   label_date = lv_label_create(lv_scr_act(), NULL);
 
-  lv_obj_align(label_date, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, -40, 60);
+  lv_obj_align(label_date, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, -120, 60);
                                              
   dayofweekday = lv_label_create(lv_scr_act(), NULL);
                                              
