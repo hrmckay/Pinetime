@@ -75,7 +75,7 @@ namespace Pinetime {
           lv_obj_t* heartbeatBpm;
           lv_obj_t* stepIcon;
           lv_obj_t* stepValue;
-          lv_obj_t* dayofweekday;
+          // lv_obj_t* dayofweekday;
 
           Controllers::DateTime& dateTimeController;
           Controllers::Battery& batteryController;
