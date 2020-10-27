@@ -30,8 +30,11 @@ Clock::Clock(DisplayApp* app,
   displayedChar[3] = 0;
   displayedChar[4] = 0;
 
+  char bozo[4];
+  sprintf(bozo, "%s ", 9);
+                                             
   batteryIcon = lv_label_create(lv_scr_act(), NULL);
-  lv_label_set_text(batteryIcon, "9%");
+  lv_label_set_text(batteryIcon, bozo);
   lv_obj_align(batteryIcon, lv_scr_act(), LV_ALIGN_IN_TOP_RIGHT, -5, 2);
 
   batteryPlug = lv_label_create(lv_scr_act(), NULL);
