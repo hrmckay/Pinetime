@@ -48,7 +48,7 @@ Clock::Clock(DisplayApp* app,
 
   label_date = lv_label_create(lv_scr_act(), NULL);
 
-  lv_obj_align(label_date, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, -120, 60);
+  lv_obj_align(label_date, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, 60);
                                              
   dayofweekday = lv_label_create(lv_scr_act(), NULL);
                                              
@@ -97,7 +97,7 @@ bool Clock::Refresh() {
   batteryPercentRemaining = batteryController.PercentRemaining();
   if (batteryPercentRemaining.IsUpdated()) {
     auto batteryPercent = batteryPercentRemaining.Get();
-    lv_label_set_text(batteryIcon, "9%");
+    lv_label_set_text(batteryIcon, "8%");
     auto isCharging = batteryController.IsCharging() || batteryController.IsPowerPresent();
     lv_label_set_text(batteryPlug, BatteryIcon::GetPlugIcon(isCharging));
   }
