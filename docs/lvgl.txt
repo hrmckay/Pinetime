@@ -1670,7 +1670,7 @@ Code[905]:
  - func[636] size=3 <disp_init>
  - func[637] size=113 <Pinetime::Applications::Screens::BatteryIcon::GetPlugIcon(bool)>
  - func[638] size=113 <Pinetime::Applications::Screens::BleIcon::GetIcon(bool)>
- - func[639] size=2748 <Pinetime::Applications::Screens::Clock::Clock(DisplayApp*, Pinetime::Controllers::DateTime&, Pinetime::Controllers::Battery&, Pinetime::Controllers::Ble&)>
+ - func[639] size=2738 <Pinetime::Applications::Screens::Clock::Clock(DisplayApp*, Pinetime::Controllers::DateTime&, Pinetime::Controllers::Battery&, Pinetime::Controllers::Ble&)>
  - func[640] size=78 <Pinetime::Applications::Screens::DirtyValue<unsigned char>::DirtyValue(unsigned char)>
  - func[641] size=99 <Pinetime::Applications::Screens::DirtyValue<bool>::DirtyValue(bool)>
  - func[642] size=79 <std::__2::chrono::time_point<std::__2::chrono::system_clock, std::__2::chrono::duration<long long, std::__2::ratio<1ll, 1000000000ll> > >::time_point()>
@@ -2391,7 +2391,7 @@ Data[3]:
   - 0001fb0: 626f 7474 6f6d 3d25 642e 2e2e 0a00 ef87  bottom=%d.......
   - 0001fc0: a600 00ef 8a94 0000 2573 2000 ef87 a600  ........%s .....
   - 0001fd0: ef8a 9400 00ef 889e 0030 0031 3032 3700  .........0.1027.
-  - 0001fe0: ef95 8b00 3925 0025 3032 6400 2563 2563  ....9%.%02d.%c%c
+  - 0001fe0: ef95 8b00 3825 0025 3032 6400 2563 2563  ....8%.%02d.%c%c
   - 0001ff0: 3a25 6325 6300 2573 2025 6400 2573 0025  :%c%c.%s %d.%s.%
   - 0002000: 6400 256c 7500 4d4f 4e44 4159 0054 5545  d.%lu.MONDAY.TUE
   - 0002010: 5344 4159 0057 4544 4e45 5344 4159 0054  SDAY.WEDNESDAY.T
