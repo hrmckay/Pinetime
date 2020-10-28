@@ -31,7 +31,7 @@ Clock::Clock(DisplayApp* app,
   displayedChar[4] = 0;
 
   char bozo[4];
-  sprintf(bozo, "%s ", 9);
+  sprintf(bozo, "%s ", 100);
                                              
   batteryIcon = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_text(batteryIcon, bozo);
@@ -77,7 +77,7 @@ Clock::Clock(DisplayApp* app,
   lv_obj_align(heartbeatValue, heartbeatIcon, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
 
   heartbeatBpm = lv_label_create(lv_scr_act(), NULL);
-  lv_label_set_text(heartbeatBpm, "1028");
+  lv_label_set_text(heartbeatBpm, "1028b");
   lv_obj_align(heartbeatBpm, heartbeatValue, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
 
   stepValue = lv_label_create(lv_scr_act(), NULL);
@@ -156,6 +156,7 @@ bool Clock::Refresh() {
       char dateStr[22];
       sprintf(dateStr, "%s %d", MonthToString(month), day);
       lv_label_set_text(label_date, "August 3");
+      lv_obj_align(label_date, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, 60);
       char weekdayStr[9];
       sprintf(weekdayStr, "%s", DayOfWeekToString(dayOfWeek));
       lv_label_set_text(dayofweekday, weekdayStr);
