@@ -29,12 +29,9 @@ Clock::Clock(DisplayApp* app,
   displayedChar[2] = 0;
   displayedChar[3] = 0;
   displayedChar[4] = 0;
-
-  char bozo[4];
-  sprintf(bozo, "%s ", 100);
                                              
   batteryIcon = lv_label_create(lv_scr_act(), NULL);
-  lv_label_set_text(batteryIcon, bozo);
+  lv_label_set_text(batteryIcon, "---%");
   lv_obj_align(batteryIcon, lv_scr_act(), LV_ALIGN_IN_TOP_RIGHT, -5, 2);
 
   batteryPlug = lv_label_create(lv_scr_act(), NULL);
@@ -77,7 +74,7 @@ Clock::Clock(DisplayApp* app,
   lv_obj_align(heartbeatValue, heartbeatIcon, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
 
   heartbeatBpm = lv_label_create(lv_scr_act(), NULL);
-  lv_label_set_text(heartbeatBpm, "1028b");
+  lv_label_set_text(heartbeatBpm, "1028c");
   lv_obj_align(heartbeatBpm, heartbeatValue, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
 
   stepValue = lv_label_create(lv_scr_act(), NULL);
@@ -98,8 +95,9 @@ bool Clock::Refresh() {
   if (batteryPercentRemaining.IsUpdated()) {
     auto batteryPercent = batteryPercentRemaining.Get();
     char bozo[4];
-    sprintf(bozo, "%s ", 8);
+    sprintf(bozo, "%s ", batteryPercent);
     lv_label_set_text(batteryIcon, bozo);
+    lv_obj_align(batteryIcon, lv_scr_act(), LV_ALIGN_IN_TOP_RIGHT, -5, 2);
     auto isCharging = batteryController.IsCharging() || batteryController.IsPowerPresent();
     lv_label_set_text(batteryPlug, BatteryIcon::GetPlugIcon(isCharging));
   }
@@ -155,11 +153,12 @@ bool Clock::Refresh() {
     if ((year != currentYear) || (month != currentMonth) || (dayOfWeek != currentDayOfWeek) || (day != currentDay)) {
       char dateStr[22];
       sprintf(dateStr, "%s %d", MonthToString(month), day);
-      lv_label_set_text(label_date, "August 3");
+      lv_label_set_text(label_date, dateStr);
       lv_obj_align(label_date, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, 60);
       char weekdayStr[9];
       sprintf(weekdayStr, "%s", DayOfWeekToString(dayOfWeek));
       lv_label_set_text(dayofweekday, weekdayStr);
+      lv_obj_align(dayofweekday, lv_scr_act(), LV_ALIGN_IN_TOP_MID, 0, 8); 
 
       currentYear = year;
       currentMonth = month;
