@@ -74,7 +74,7 @@ Clock::Clock(DisplayApp* app,
   lv_obj_align(heartbeatValue, heartbeatIcon, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
 
   heartbeatBpm = lv_label_create(lv_scr_act(), NULL);
-  lv_label_set_text(heartbeatBpm, "1028c");
+  lv_label_set_text(heartbeatBpm, "1028d");
   lv_obj_align(heartbeatBpm, heartbeatValue, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
 
   stepValue = lv_label_create(lv_scr_act(), NULL);
@@ -95,7 +95,7 @@ bool Clock::Refresh() {
   if (batteryPercentRemaining.IsUpdated()) {
     auto batteryPercent = batteryPercentRemaining.Get();
     char bozo[4];
-    sprintf(bozo, "%s ", batteryPercent);
+    sprintf(bozo, "%lu%%", batteryPercent);
     lv_label_set_text(batteryIcon, bozo);
     lv_obj_align(batteryIcon, lv_scr_act(), LV_ALIGN_IN_TOP_RIGHT, -5, 2);
     auto isCharging = batteryController.IsCharging() || batteryController.IsPowerPresent();
