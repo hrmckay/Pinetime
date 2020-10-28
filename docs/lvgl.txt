@@ -685,12 +685,12 @@ Function[905]:
  - func[637] sig=1 <Pinetime::Applications::Screens::BatteryIcon::GetPlugIcon(bool)>
  - func[638] sig=1 <Pinetime::Applications::Screens::BleIcon::GetIcon(bool)>
  - func[639] sig=10 <Pinetime::Applications::Screens::Clock::Clock(DisplayApp*, Pinetime::Controllers::DateTime&, Pinetime::Controllers::Battery&, Pinetime::Controllers::Ble&)>
- - func[640] sig=0 <Pinetime::Applications::Screens::DirtyValue<unsigned char>::DirtyValue(unsigned char)>
- - func[641] sig=0 <Pinetime::Applications::Screens::DirtyValue<bool>::DirtyValue(bool)>
- - func[642] sig=1 <std::__2::chrono::time_point<std::__2::chrono::system_clock, std::__2::chrono::duration<long long, std::__2::ratio<1ll, 1000000000ll> > >::time_point()>
- - func[643] sig=23 <Pinetime::Applications::Screens::DirtyValue<std::__2::chrono::time_point<std::__2::chrono::system_clock, std::__2::chrono::duration<long long, std::__2::ratio<1ll, 1000000000ll> > > >::DirtyValue(std::__2::chrono::time_point<std::__2::chrono::system_clock, std::__2::chrono::duration<long long, std::__2::ratio<1ll, 1000000000ll> > >)>
- - func[644] sig=0 <Pinetime::Applications::Screens::DirtyValue<unsigned int>::DirtyValue(unsigned int)>
- - func[645] sig=4 <event_handler(_lv_obj_t*, unsigned char)>
+ - func[640] sig=4 <event_handler(_lv_obj_t*, unsigned char)>
+ - func[641] sig=0 <Pinetime::Applications::Screens::DirtyValue<unsigned char>::DirtyValue(unsigned char)>
+ - func[642] sig=0 <Pinetime::Applications::Screens::DirtyValue<bool>::DirtyValue(bool)>
+ - func[643] sig=1 <std::__2::chrono::time_point<std::__2::chrono::system_clock, std::__2::chrono::duration<long long, std::__2::ratio<1ll, 1000000000ll> > >::time_point()>
+ - func[644] sig=23 <Pinetime::Applications::Screens::DirtyValue<std::__2::chrono::time_point<std::__2::chrono::system_clock, std::__2::chrono::duration<long long, std::__2::ratio<1ll, 1000000000ll> > > >::DirtyValue(std::__2::chrono::time_point<std::__2::chrono::system_clock, std::__2::chrono::duration<long long, std::__2::ratio<1ll, 1000000000ll> > >)>
+ - func[645] sig=0 <Pinetime::Applications::Screens::DirtyValue<unsigned int>::DirtyValue(unsigned int)>
  - func[646] sig=8 <lv_scr_act()>
  - func[647] sig=26 <std::__2::chrono::duration<long long, std::__2::ratio<1ll, 1000000000ll> >::zero()>
  - func[648] sig=2 <Pinetime::Applications::Screens::Clock::OnObjectEvent(_lv_obj_t*, unsigned char)>
@@ -1028,7 +1028,7 @@ Elem[1]:
   - elem[36] = func[610] <lv_img_decoder_built_in_open>
   - elem[37] = func[611] <lv_img_decoder_built_in_info>
   - elem[38] = func[635] <disp_flush>
-  - elem[39] = func[645] <event_handler(_lv_obj_t*, unsigned char)>
+  - elem[39] = func[640] <event_handler(_lv_obj_t*, unsigned char)>
   - elem[40] = func[327] <lv_font_get_glyph_dsc_fmt_txt>
   - elem[41] = func[320] <lv_font_get_bitmap_fmt_txt>
   - elem[42] = func[843] <sn_write>
@@ -1670,17 +1670,17 @@ Code[905]:
  - func[636] size=3 <disp_init>
  - func[637] size=113 <Pinetime::Applications::Screens::BatteryIcon::GetPlugIcon(bool)>
  - func[638] size=113 <Pinetime::Applications::Screens::BleIcon::GetIcon(bool)>
- - func[639] size=2739 <Pinetime::Applications::Screens::Clock::Clock(DisplayApp*, Pinetime::Controllers::DateTime&, Pinetime::Controllers::Battery&, Pinetime::Controllers::Ble&)>
- - func[640] size=78 <Pinetime::Applications::Screens::DirtyValue<unsigned char>::DirtyValue(unsigned char)>
- - func[641] size=99 <Pinetime::Applications::Screens::DirtyValue<bool>::DirtyValue(bool)>
- - func[642] size=79 <std::__2::chrono::time_point<std::__2::chrono::system_clock, std::__2::chrono::duration<long long, std::__2::ratio<1ll, 1000000000ll> > >::time_point()>
- - func[643] size=128 <Pinetime::Applications::Screens::DirtyValue<std::__2::chrono::time_point<std::__2::chrono::system_clock, std::__2::chrono::duration<long long, std::__2::ratio<1ll, 1000000000ll> > > >::DirtyValue(std::__2::chrono::time_point<std::__2::chrono::system_clock, std::__2::chrono::duration<long long, std::__2::ratio<1ll, 1000000000ll> > >)>
- - func[644] size=78 <Pinetime::Applications::Screens::DirtyValue<unsigned int>::DirtyValue(unsigned int)>
- - func[645] size=137 <event_handler(_lv_obj_t*, unsigned char)>
+ - func[639] size=2622 <Pinetime::Applications::Screens::Clock::Clock(DisplayApp*, Pinetime::Controllers::DateTime&, Pinetime::Controllers::Battery&, Pinetime::Controllers::Ble&)>
+ - func[640] size=137 <event_handler(_lv_obj_t*, unsigned char)>
+ - func[641] size=78 <Pinetime::Applications::Screens::DirtyValue<unsigned char>::DirtyValue(unsigned char)>
+ - func[642] size=99 <Pinetime::Applications::Screens::DirtyValue<bool>::DirtyValue(bool)>
+ - func[643] size=79 <std::__2::chrono::time_point<std::__2::chrono::system_clock, std::__2::chrono::duration<long long, std::__2::ratio<1ll, 1000000000ll> > >::time_point()>
+ - func[644] size=128 <Pinetime::Applications::Screens::DirtyValue<std::__2::chrono::time_point<std::__2::chrono::system_clock, std::__2::chrono::duration<long long, std::__2::ratio<1ll, 1000000000ll> > > >::DirtyValue(std::__2::chrono::time_point<std::__2::chrono::system_clock, std::__2::chrono::duration<long long, std::__2::ratio<1ll, 1000000000ll> > >)>
+ - func[645] size=78 <Pinetime::Applications::Screens::DirtyValue<unsigned int>::DirtyValue(unsigned int)>
  - func[646] size=20 <lv_scr_act()>
  - func[647] size=115 <std::__2::chrono::duration<long long, std::__2::ratio<1ll, 1000000000ll> >::zero()>
  - func[648] size=204 <Pinetime::Applications::Screens::Clock::OnObjectEvent(_lv_obj_t*, unsigned char)>
- - func[649] size=5359 <Pinetime::Applications::Screens::Clock::Refresh()>
+ - func[649] size=5690 <Pinetime::Applications::Screens::Clock::Refresh()>
  - func[650] size=51 <Pinetime::Controllers::Battery::PercentRemaining() const>
  - func[651] size=190 <Pinetime::Applications::Screens::DirtyValue<unsigned char>::operator=(unsigned char const&)>
  - func[652] size=66 <Pinetime::Applications::Screens::DirtyValue<unsigned char>::IsUpdated() const>
@@ -2389,34 +2389,34 @@ Data[3]:
   - 0001f90: 6c61 793a 206c 6566 743d 2564 2c20 746f  lay: left=%d, to
   - 0001fa0: 703d 2564 2c20 7269 6768 743d 2564 2c20  p=%d, right=%d, 
   - 0001fb0: 626f 7474 6f6d 3d25 642e 2e2e 0a00 ef87  bottom=%d.......
-  - 0001fc0: a600 00ef 8a94 0000 2573 2000 ef87 a600  ........%s .....
-  - 0001fd0: ef8a 9400 00ef 889e 0030 0031 3032 3862  .........0.1028b
-  - 0001fe0: 00ef 958b 0025 3032 6400 2563 2563 3a25  .....%02d.%c%c:%
-  - 0001ff0: 6325 6300 2573 2025 6400 4175 6775 7374  c%c.%s %d.August
-  - 0002000: 2033 0025 7300 2564 0025 6c75 004d 4f4e   3.%s.%d.%lu.MON
-  - 0002010: 4441 5900 5455 4553 4441 5900 5745 444e  DAY.TUESDAY.WEDN
-  - 0002020: 4553 4441 5900 5448 5552 5344 4159 0046  ESDAY.THURSDAY.F
-  - 0002030: 5249 4441 5900 5341 5455 5244 4159 0053  RIDAY.SATURDAY.S
-  - 0002040: 554e 4441 5900 4a61 6e75 6172 7900 4665  UNDAY.January.Fe
-  - 0002050: 6272 7561 7279 004d 6172 6368 0041 7072  bruary.March.Apr
-  - 0002060: 696c 004d 6179 004a 756e 6500 4a75 6c79  il.May.June.July
-  - 0002070: 0041 7567 7573 7400 5365 7074 656d 6265  .August.Septembe
-  - 0002080: 7200 4f63 746f 6265 7200 4e6f 7665 6d62  r.October.Novemb
-  - 0002090: 6572 0044 6563 656d 6265 7200 0249 6e20  er.December..In 
-  - 00020a0: 432b 2b3a 2043 7265 6174 696e 6720 636c  C++: Creating cl
-  - 00020b0: 6f63 6b2e 2e2e 004c 6162 656c 4269 6753  ock....LabelBigS
-  - 00020c0: 7479 6c65 2021 3d20 6e75 6c6c 7074 7200  tyle != nullptr.
-  - 00020d0: 636c 6f63 6b2f 436c 6f63 6b48 656c 7065  clock/ClockHelpe
-  - 00020e0: 722e 6370 7000 6372 6561 7465 5f63 6c6f  r.cpp.create_clo
-  - 00020f0: 636b 0049 6e20 432b 2b3a 2052 6566 7265  ck.In C++: Refre
-  - 0002100: 7368 696e 6720 636c 6f63 6b2e 2e2e 0063  shing clock....c
-  - 0002110: 6c6f 636b 3020 213d 206e 756c 6c70 7472  lock0 != nullptr
-  - 0002120: 0072 6566 7265 7368 5f63 6c6f 636b 0049  .refresh_clock.I
-  - 0002130: 6e20 432b 2b3a 2055 7064 6174 696e 6720  n C++: Updating 
-  - 0002140: 636c 6f63 6b2e 2e2e 0064 6174 6554 696d  clock....dateTim
-  - 0002150: 6543 6f6e 7472 6f6c 6c65 7230 2021 3d20  eController0 != 
-  - 0002160: 6e75 6c6c 7074 7200 7570 6461 7465 5f63  nullptr.update_c
-  - 0002170: 6c6f 636b 0000 0000 0000 0000 0000 0000  lock............
+  - 0001fc0: a600 00ef 8a94 0000 2d2d 2d25 00ef 87a6  ........---%....
+  - 0001fd0: 00ef 8a94 0000 ef88 9e00 3000 3130 3238  ..........0.1028
+  - 0001fe0: 6300 ef95 8b00 2573 2000 2530 3264 0025  c.....%s .%02d.%
+  - 0001ff0: 6325 633a 2563 2563 0025 7320 2564 0025  c%c:%c%c.%s %d.%
+  - 0002000: 7300 2564 0025 6c75 004d 4f4e 4441 5900  s.%d.%lu.MONDAY.
+  - 0002010: 5455 4553 4441 5900 5745 444e 4553 4441  TUESDAY.WEDNESDA
+  - 0002020: 5900 5448 5552 5344 4159 0046 5249 4441  Y.THURSDAY.FRIDA
+  - 0002030: 5900 5341 5455 5244 4159 0053 554e 4441  Y.SATURDAY.SUNDA
+  - 0002040: 5900 4a61 6e75 6172 7900 4665 6272 7561  Y.January.Februa
+  - 0002050: 7279 004d 6172 6368 0041 7072 696c 004d  ry.March.April.M
+  - 0002060: 6179 004a 756e 6500 4a75 6c79 0041 7567  ay.June.July.Aug
+  - 0002070: 7573 7400 5365 7074 656d 6265 7200 4f63  ust.September.Oc
+  - 0002080: 746f 6265 7200 4e6f 7665 6d62 6572 0044  tober.November.D
+  - 0002090: 6563 656d 6265 7200 0249 6e20 432b 2b3a  ecember..In C++:
+  - 00020a0: 2043 7265 6174 696e 6720 636c 6f63 6b2e   Creating clock.
+  - 00020b0: 2e2e 004c 6162 656c 4269 6753 7479 6c65  ...LabelBigStyle
+  - 00020c0: 2021 3d20 6e75 6c6c 7074 7200 636c 6f63   != nullptr.cloc
+  - 00020d0: 6b2f 436c 6f63 6b48 656c 7065 722e 6370  k/ClockHelper.cp
+  - 00020e0: 7000 6372 6561 7465 5f63 6c6f 636b 0049  p.create_clock.I
+  - 00020f0: 6e20 432b 2b3a 2052 6566 7265 7368 696e  n C++: Refreshin
+  - 0002100: 6720 636c 6f63 6b2e 2e2e 0063 6c6f 636b  g clock....clock
+  - 0002110: 3020 213d 206e 756c 6c70 7472 0072 6566  0 != nullptr.ref
+  - 0002120: 7265 7368 5f63 6c6f 636b 0049 6e20 432b  resh_clock.In C+
+  - 0002130: 2b3a 2055 7064 6174 696e 6720 636c 6f63  +: Updating cloc
+  - 0002140: 6b2e 2e2e 0064 6174 6554 696d 6543 6f6e  k....dateTimeCon
+  - 0002150: 7472 6f6c 6c65 7230 2021 3d20 6e75 6c6c  troller0 != null
+  - 0002160: 7074 7200 7570 6461 7465 5f63 6c6f 636b  ptr.update_clock
+  - 0002170: 0000 0000 0000 0000 0000 0000 0000 0000  ................
   - 0002180: 00ff ffff e00f c0ef dfbf 7efd c008 c310  ..........~.....
   - 0002190: 623f f7fe 2304 6188 311f fbff 1982 30c4  b?..#.a.1.....0.
   - 00021a0: 0008 0201 c1fe ebf2 7c83 a07c 0fc0 f827  ........|..|...'
@@ -2866,12 +2866,12 @@ Data[3]:
   - 0003d50: 1900 0000 1a00 0000 0000 0000 0000 0000  ................
   - 0003d60: 2616 0000 2c16 0000 3116 0000 3616 0000  &...,...1...6...
   - 0003d70: 3c16 0000 0000 0000 0000 0000 0000 0000  <...............
-  - 0003d80: d41f 0000 0d20 0000 1420 0000 1c20 0000  ..... ... ... ..
-  - 0003d90: 2620 0000 2f20 0000 3620 0000 3f20 0000  & ../ ..6 ..? ..
-  - 0003da0: d41f 0000 4620 0000 4e20 0000 5720 0000  ....F ..N ..W ..
-  - 0003db0: 5d20 0000 6320 0000 6720 0000 6c20 0000  ] ..c ..g ..l ..
-  - 0003dc0: 7120 0000 7820 0000 8220 0000 8a20 0000  q ..x ... ... ..
-  - 0003dd0: 9320 0000 2800 0000 2900 0000 1500 0300  . ..(...).......
+  - 0003d80: d51f 0000 0920 0000 1020 0000 1820 0000  ..... ... ... ..
+  - 0003d90: 2220 0000 2b20 0000 3220 0000 3b20 0000  " ..+ ..2 ..; ..
+  - 0003da0: d51f 0000 4220 0000 4a20 0000 5320 0000  ....B ..J ..S ..
+  - 0003db0: 5920 0000 5f20 0000 6320 0000 6820 0000  Y .._ ..c ..h ..
+  - 0003dc0: 6d20 0000 7420 0000 7e20 0000 8620 0000  m ..t ..~ ... ..
+  - 0003dd0: 8f20 0000 2800 0000 2900 0000 1500 0300  . ..(...).......
   - 0003de0: 0000 0000 ec3d 0000 0000 0000 8021 0000  .....=.......!..
   - 0003df0: 9029 0000 6029 0000 0000 0000 0000 0204  .)..`)..........
   - 0003e00: 0000 0000 0000 0000 0000 0000 2800 0000  ............(...
@@ -33020,12 +33020,12 @@ Custom:
  - func[637] <Pinetime::Applications::Screens::BatteryIcon::GetPlugIcon(bool)>
  - func[638] <Pinetime::Applications::Screens::BleIcon::GetIcon(bool)>
  - func[639] <Pinetime::Applications::Screens::Clock::Clock(DisplayApp*, Pinetime::Controllers::DateTime&, Pinetime::Controllers::Battery&, Pinetime::Controllers::Ble&)>
- - func[640] <Pinetime::Applications::Screens::DirtyValue<unsigned char>::DirtyValue(unsigned char)>
- - func[641] <Pinetime::Applications::Screens::DirtyValue<bool>::DirtyValue(bool)>
- - func[642] <std::__2::chrono::time_point<std::__2::chrono::system_clock, std::__2::chrono::duration<long long, std::__2::ratio<1ll, 1000000000ll> > >::time_point()>
- - func[643] <Pinetime::Applications::Screens::DirtyValue<std::__2::chrono::time_point<std::__2::chrono::system_clock, std::__2::chrono::duration<long long, std::__2::ratio<1ll, 1000000000ll> > > >::DirtyValue(std::__2::chrono::time_point<std::__2::chrono::system_clock, std::__2::chrono::duration<long long, std::__2::ratio<1ll, 1000000000ll> > >)>
- - func[644] <Pinetime::Applications::Screens::DirtyValue<unsigned int>::DirtyValue(unsigned int)>
- - func[645] <event_handler(_lv_obj_t*, unsigned char)>
+ - func[640] <event_handler(_lv_obj_t*, unsigned char)>
+ - func[641] <Pinetime::Applications::Screens::DirtyValue<unsigned char>::DirtyValue(unsigned char)>
+ - func[642] <Pinetime::Applications::Screens::DirtyValue<bool>::DirtyValue(bool)>
+ - func[643] <std::__2::chrono::time_point<std::__2::chrono::system_clock, std::__2::chrono::duration<long long, std::__2::ratio<1ll, 1000000000ll> > >::time_point()>
+ - func[644] <Pinetime::Applications::Screens::DirtyValue<std::__2::chrono::time_point<std::__2::chrono::system_clock, std::__2::chrono::duration<long long, std::__2::ratio<1ll, 1000000000ll> > > >::DirtyValue(std::__2::chrono::time_point<std::__2::chrono::system_clock, std::__2::chrono::duration<long long, std::__2::ratio<1ll, 1000000000ll> > >)>
+ - func[645] <Pinetime::Applications::Screens::DirtyValue<unsigned int>::DirtyValue(unsigned int)>
  - func[646] <lv_scr_act()>
  - func[647] <std::__2::chrono::duration<long long, std::__2::ratio<1ll, 1000000000ll> >::zero()>
  - func[648] <Pinetime::Applications::Screens::Clock::OnObjectEvent(_lv_obj_t*, unsigned char)>
