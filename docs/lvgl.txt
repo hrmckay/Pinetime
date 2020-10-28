@@ -1670,7 +1670,7 @@ Code[905]:
  - func[636] size=3 <disp_init>
  - func[637] size=113 <Pinetime::Applications::Screens::BatteryIcon::GetPlugIcon(bool)>
  - func[638] size=113 <Pinetime::Applications::Screens::BleIcon::GetIcon(bool)>
- - func[639] size=2738 <Pinetime::Applications::Screens::Clock::Clock(DisplayApp*, Pinetime::Controllers::DateTime&, Pinetime::Controllers::Battery&, Pinetime::Controllers::Ble&)>
+ - func[639] size=2739 <Pinetime::Applications::Screens::Clock::Clock(DisplayApp*, Pinetime::Controllers::DateTime&, Pinetime::Controllers::Battery&, Pinetime::Controllers::Ble&)>
  - func[640] size=78 <Pinetime::Applications::Screens::DirtyValue<unsigned char>::DirtyValue(unsigned char)>
  - func[641] size=99 <Pinetime::Applications::Screens::DirtyValue<bool>::DirtyValue(bool)>
  - func[642] size=79 <std::__2::chrono::time_point<std::__2::chrono::system_clock, std::__2::chrono::duration<long long, std::__2::ratio<1ll, 1000000000ll> > >::time_point()>
@@ -1680,7 +1680,7 @@ Code[905]:
  - func[646] size=20 <lv_scr_act()>
  - func[647] size=115 <std::__2::chrono::duration<long long, std::__2::ratio<1ll, 1000000000ll> >::zero()>
  - func[648] size=204 <Pinetime::Applications::Screens::Clock::OnObjectEvent(_lv_obj_t*, unsigned char)>
- - func[649] size=5221 <Pinetime::Applications::Screens::Clock::Refresh()>
+ - func[649] size=5359 <Pinetime::Applications::Screens::Clock::Refresh()>
  - func[650] size=51 <Pinetime::Controllers::Battery::PercentRemaining() const>
  - func[651] size=190 <Pinetime::Applications::Screens::DirtyValue<unsigned char>::operator=(unsigned char const&)>
  - func[652] size=66 <Pinetime::Applications::Screens::DirtyValue<unsigned char>::IsUpdated() const>
@@ -2390,33 +2390,33 @@ Data[3]:
   - 0001fa0: 703d 2564 2c20 7269 6768 743d 2564 2c20  p=%d, right=%d, 
   - 0001fb0: 626f 7474 6f6d 3d25 642e 2e2e 0a00 ef87  bottom=%d.......
   - 0001fc0: a600 00ef 8a94 0000 2573 2000 ef87 a600  ........%s .....
-  - 0001fd0: ef8a 9400 00ef 889e 0030 0031 3032 3800  .........0.1028.
-  - 0001fe0: ef95 8b00 2530 3264 0025 6325 633a 2563  ....%02d.%c%c:%c
-  - 0001ff0: 2563 0025 7320 2564 0041 7567 7573 7420  %c.%s %d.August 
-  - 0002000: 3300 2573 0025 6400 256c 7500 4d4f 4e44  3.%s.%d.%lu.MOND
-  - 0002010: 4159 0054 5545 5344 4159 0057 4544 4e45  AY.TUESDAY.WEDNE
-  - 0002020: 5344 4159 0054 4855 5253 4441 5900 4652  SDAY.THURSDAY.FR
-  - 0002030: 4944 4159 0053 4154 5552 4441 5900 5355  IDAY.SATURDAY.SU
-  - 0002040: 4e44 4159 004a 616e 7561 7279 0046 6562  NDAY.January.Feb
-  - 0002050: 7275 6172 7900 4d61 7263 6800 4170 7269  ruary.March.Apri
-  - 0002060: 6c00 4d61 7900 4a75 6e65 004a 756c 7900  l.May.June.July.
-  - 0002070: 4175 6775 7374 0053 6570 7465 6d62 6572  August.September
-  - 0002080: 004f 6374 6f62 6572 004e 6f76 656d 6265  .October.Novembe
-  - 0002090: 7200 4465 6365 6d62 6572 0002 496e 2043  r.December..In C
-  - 00020a0: 2b2b 3a20 4372 6561 7469 6e67 2063 6c6f  ++: Creating clo
-  - 00020b0: 636b 2e2e 2e00 4c61 6265 6c42 6967 5374  ck....LabelBigSt
-  - 00020c0: 796c 6520 213d 206e 756c 6c70 7472 0063  yle != nullptr.c
-  - 00020d0: 6c6f 636b 2f43 6c6f 636b 4865 6c70 6572  lock/ClockHelper
-  - 00020e0: 2e63 7070 0063 7265 6174 655f 636c 6f63  .cpp.create_cloc
-  - 00020f0: 6b00 496e 2043 2b2b 3a20 5265 6672 6573  k.In C++: Refres
-  - 0002100: 6869 6e67 2063 6c6f 636b 2e2e 2e00 636c  hing clock....cl
-  - 0002110: 6f63 6b30 2021 3d20 6e75 6c6c 7074 7200  ock0 != nullptr.
-  - 0002120: 7265 6672 6573 685f 636c 6f63 6b00 496e  refresh_clock.In
-  - 0002130: 2043 2b2b 3a20 5570 6461 7469 6e67 2063   C++: Updating c
-  - 0002140: 6c6f 636b 2e2e 2e00 6461 7465 5469 6d65  lock....dateTime
-  - 0002150: 436f 6e74 726f 6c6c 6572 3020 213d 206e  Controller0 != n
-  - 0002160: 756c 6c70 7472 0075 7064 6174 655f 636c  ullptr.update_cl
-  - 0002170: 6f63 6b00 0000 0000 0000 0000 0000 0000  ock.............
+  - 0001fd0: ef8a 9400 00ef 889e 0030 0031 3032 3862  .........0.1028b
+  - 0001fe0: 00ef 958b 0025 3032 6400 2563 2563 3a25  .....%02d.%c%c:%
+  - 0001ff0: 6325 6300 2573 2025 6400 4175 6775 7374  c%c.%s %d.August
+  - 0002000: 2033 0025 7300 2564 0025 6c75 004d 4f4e   3.%s.%d.%lu.MON
+  - 0002010: 4441 5900 5455 4553 4441 5900 5745 444e  DAY.TUESDAY.WEDN
+  - 0002020: 4553 4441 5900 5448 5552 5344 4159 0046  ESDAY.THURSDAY.F
+  - 0002030: 5249 4441 5900 5341 5455 5244 4159 0053  RIDAY.SATURDAY.S
+  - 0002040: 554e 4441 5900 4a61 6e75 6172 7900 4665  UNDAY.January.Fe
+  - 0002050: 6272 7561 7279 004d 6172 6368 0041 7072  bruary.March.Apr
+  - 0002060: 696c 004d 6179 004a 756e 6500 4a75 6c79  il.May.June.July
+  - 0002070: 0041 7567 7573 7400 5365 7074 656d 6265  .August.Septembe
+  - 0002080: 7200 4f63 746f 6265 7200 4e6f 7665 6d62  r.October.Novemb
+  - 0002090: 6572 0044 6563 656d 6265 7200 0249 6e20  er.December..In 
+  - 00020a0: 432b 2b3a 2043 7265 6174 696e 6720 636c  C++: Creating cl
+  - 00020b0: 6f63 6b2e 2e2e 004c 6162 656c 4269 6753  ock....LabelBigS
+  - 00020c0: 7479 6c65 2021 3d20 6e75 6c6c 7074 7200  tyle != nullptr.
+  - 00020d0: 636c 6f63 6b2f 436c 6f63 6b48 656c 7065  clock/ClockHelpe
+  - 00020e0: 722e 6370 7000 6372 6561 7465 5f63 6c6f  r.cpp.create_clo
+  - 00020f0: 636b 0049 6e20 432b 2b3a 2052 6566 7265  ck.In C++: Refre
+  - 0002100: 7368 696e 6720 636c 6f63 6b2e 2e2e 0063  shing clock....c
+  - 0002110: 6c6f 636b 3020 213d 206e 756c 6c70 7472  lock0 != nullptr
+  - 0002120: 0072 6566 7265 7368 5f63 6c6f 636b 0049  .refresh_clock.I
+  - 0002130: 6e20 432b 2b3a 2055 7064 6174 696e 6720  n C++: Updating 
+  - 0002140: 636c 6f63 6b2e 2e2e 0064 6174 6554 696d  clock....dateTim
+  - 0002150: 6543 6f6e 7472 6f6c 6c65 7230 2021 3d20  eController0 != 
+  - 0002160: 6e75 6c6c 7074 7200 7570 6461 7465 5f63  nullptr.update_c
+  - 0002170: 6c6f 636b 0000 0000 0000 0000 0000 0000  lock............
   - 0002180: 00ff ffff e00f c0ef dfbf 7efd c008 c310  ..........~.....
   - 0002190: 623f f7fe 2304 6188 311f fbff 1982 30c4  b?..#.a.1.....0.
   - 00021a0: 0008 0201 c1fe ebf2 7c83 a07c 0fc0 f827  ........|..|...'
@@ -2866,12 +2866,12 @@ Data[3]:
   - 0003d50: 1900 0000 1a00 0000 0000 0000 0000 0000  ................
   - 0003d60: 2616 0000 2c16 0000 3116 0000 3616 0000  &...,...1...6...
   - 0003d70: 3c16 0000 0000 0000 0000 0000 0000 0000  <...............
-  - 0003d80: d41f 0000 0c20 0000 1320 0000 1b20 0000  ..... ... ... ..
-  - 0003d90: 2520 0000 2e20 0000 3520 0000 3e20 0000  % ... ..5 ..> ..
-  - 0003da0: d41f 0000 4520 0000 4d20 0000 5620 0000  ....E ..M ..V ..
-  - 0003db0: 5c20 0000 6220 0000 6620 0000 6b20 0000  \ ..b ..f ..k ..
-  - 0003dc0: 7020 0000 7720 0000 8120 0000 8920 0000  p ..w ... ... ..
-  - 0003dd0: 9220 0000 2800 0000 2900 0000 1500 0300  . ..(...).......
+  - 0003d80: d41f 0000 0d20 0000 1420 0000 1c20 0000  ..... ... ... ..
+  - 0003d90: 2620 0000 2f20 0000 3620 0000 3f20 0000  & ../ ..6 ..? ..
+  - 0003da0: d41f 0000 4620 0000 4e20 0000 5720 0000  ....F ..N ..W ..
+  - 0003db0: 5d20 0000 6320 0000 6720 0000 6c20 0000  ] ..c ..g ..l ..
+  - 0003dc0: 7120 0000 7820 0000 8220 0000 8a20 0000  q ..x ... ... ..
+  - 0003dd0: 9320 0000 2800 0000 2900 0000 1500 0300  . ..(...).......
   - 0003de0: 0000 0000 ec3d 0000 0000 0000 8021 0000  .....=.......!..
   - 0003df0: 9029 0000 6029 0000 0000 0000 0000 0204  .)..`)..........
   - 0003e00: 0000 0000 0000 0000 0000 0000 2800 0000  ............(...
