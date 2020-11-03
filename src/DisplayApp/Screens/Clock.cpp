@@ -32,7 +32,7 @@ Clock::Clock(DisplayApp* app,
 
   bleIcon = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_text(bleIcon, Symbols::bluetooth);
-  lv_obj_align(bleIcon, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, 60);
+  lv_obj_align(bleIcon, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, 20);
                                              
   batteryIcon = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_text(batteryIcon, "---%");
@@ -44,7 +44,7 @@ Clock::Clock(DisplayApp* app,
                                            
   label_date = lv_label_create(lv_scr_act(), NULL);
 
-  lv_obj_align(label_date, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, 60);
+  lv_obj_align(label_date, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, 20);
                                              
   dayofweekday = lv_label_create(lv_scr_act(), NULL);
                                              
@@ -52,7 +52,7 @@ Clock::Clock(DisplayApp* app,
 
   label_time = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_style(label_time, LV_LABEL_STYLE_MAIN, LabelBigStyle);
-  lv_obj_align(label_time, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, -20);
+  lv_obj_align(label_time, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, -40);
 
   backgroundLabel = lv_label_create(lv_scr_act(), NULL);
   backgroundLabel->user_data = this;
@@ -109,7 +109,7 @@ bool Clock::Refresh() {
       lv_label_set_text(bleIcon, BleIcon::GetIcon(false));
     }
   }
-  lv_obj_align(bleIcon, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, 60);
+  lv_obj_align(bleIcon, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, 20);
   lv_obj_align(batteryIcon, bleIcon, LV_ALIGN_OUT_RIGHT_MID, 0, 0);
   lv_obj_align(batteryPlug, batteryIcon, LV_ALIGN_OUT_RIGHT_MID, 0, 0); 
 
@@ -153,11 +153,11 @@ bool Clock::Refresh() {
       char dateStr[22];
       sprintf(dateStr, "%s %d", MonthToString(month), day);
       lv_label_set_text(label_date, dateStr);
-      lv_obj_align(label_date, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, 60);
+      lv_obj_align(label_date, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, 20);
       char weekdayStr[9];
       sprintf(weekdayStr, "%s", DayOfWeekToString(dayOfWeek));
       lv_label_set_text(dayofweekday, weekdayStr);
-      lv_obj_align(dayofweekday, lv_scr_act(), LV_ALIGN_IN_TOP_MID, 0, 8); 
+      lv_obj_align(dayofweekday, lv_scr_act(), LV_ALIGN_IN_TOP_MID, 0, 0); 
 
       currentYear = year;
       currentMonth = month;
