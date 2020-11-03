@@ -29,31 +29,30 @@ Clock::Clock(DisplayApp* app,
   displayedChar[2] = 0;
   displayedChar[3] = 0;
   displayedChar[4] = 0;
-                                             
-  batteryIcon = lv_label_create(lv_scr_act(), NULL);
-  lv_label_set_text(batteryIcon, "---%");
-  lv_obj_align(batteryIcon, lv_scr_act(), LV_ALIGN_IN_TOP_RIGHT, -5, 2);
-
-  batteryPlug = lv_label_create(lv_scr_act(), NULL);
-  lv_label_set_text(batteryPlug, Symbols::plug);
-  lv_obj_align(batteryPlug, batteryIcon, LV_ALIGN_OUT_LEFT_MID, -5, 0);
 
   bleIcon = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_text(bleIcon, Symbols::bluetooth);
   lv_obj_align(bleIcon, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, 60);
-
-
+                                             
+  batteryIcon = lv_label_create(lv_scr_act(), NULL);
+  lv_label_set_text(batteryIcon, "---%");
+  lv_obj_align(batteryIcon, bleIcon, LV_ALIGN_OUT_RIGHT_MID, 0, 0);
+                                             
+  batteryPlug = lv_label_create(lv_scr_act(), NULL);
+  lv_label_set_text(batteryPlug, Symbols::plug);
+  lv_obj_align(batteryPlug, batteryIcon, LV_ALIGN_OUT_RIGHT_MID, 0, 0);                                          
+                                           
   label_date = lv_label_create(lv_scr_act(), NULL);
 
   lv_obj_align(label_date, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, 60);
                                              
   dayofweekday = lv_label_create(lv_scr_act(), NULL);
                                              
-  lv_obj_align(dayofweekday, lv_scr_act(), LV_ALIGN_IN_TOP_MID, 0, 8);                                           
+  lv_obj_align(dayofweekday, lv_scr_act(), LV_ALIGN_IN_TOP_MID, 0, 0);                                           
 
   label_time = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_style(label_time, LV_LABEL_STYLE_MAIN, LabelBigStyle);
-  lv_obj_align(label_time, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, 0);
+  lv_obj_align(label_time, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, -20);
 
   backgroundLabel = lv_label_create(lv_scr_act(), NULL);
   backgroundLabel->user_data = this;
