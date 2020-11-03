@@ -109,9 +109,9 @@ bool Clock::Refresh() {
       lv_label_set_text(bleIcon, BleIcon::GetIcon(false));
     }
   }
-  lv_obj_align(batteryIcon, lv_scr_act(), LV_ALIGN_IN_TOP_RIGHT, -5, 5);
-  lv_obj_align(batteryPlug, batteryIcon, LV_ALIGN_OUT_LEFT_MID, -5, 0);
-  lv_obj_align(bleIcon, batteryPlug, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+  lv_obj_align(bleIcon, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, 60);
+  lv_obj_align(batteryIcon, bleIcon, LV_ALIGN_OUT_RIGHT_MID, 0, 0);
+  lv_obj_align(batteryPlug, batteryIcon, LV_ALIGN_OUT_RIGHT_MID, 0, 0); 
 
   currentDateTime = dateTimeController.CurrentDateTime();
 
