@@ -53,7 +53,7 @@ Clock::Clock(DisplayApp* app,
                                              
   ampmvalue = lv_label_create(lv_scr_act(), NULL);
                                              
-  lv_obj_align(ampmvalue, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, -10);                                           
+  lv_obj_align(ampmvalue, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, -15);                                           
 
   label_time = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_style(label_time, LV_LABEL_STYLE_MAIN, LabelBigStyle);
@@ -142,7 +142,7 @@ bool Clock::Refresh() {
     }
     if (hour == 0) hour = 12;
     lv_label_set_text(ampmvalue, ampm);
-    lv_obj_align(ampmvalue, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, -10);     
+    lv_obj_align(ampmvalue, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, -15);     
     
     auto minute = time.minutes().count();
     auto second = time.seconds().count();
