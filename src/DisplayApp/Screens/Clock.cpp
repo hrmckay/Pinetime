@@ -97,7 +97,7 @@ bool Clock::Refresh() {
   batteryPercentRemaining = batteryController.PercentRemaining();
   if (batteryPercentRemaining.IsUpdated()) {
     auto batteryPercent = batteryPercentRemaining.Get();
-    char bozo[4];
+    char bozo[5];
     sprintf(bozo, "%lu%%", batteryPercent);
     lv_label_set_text(batteryIcon, bozo);
     lv_obj_align(batteryIcon, lv_scr_act(), LV_ALIGN_IN_TOP_RIGHT, -5, 2);
@@ -131,13 +131,13 @@ bool Clock::Refresh() {
     auto day = (unsigned)yearMonthDay.day();
     auto dayOfWeek = static_cast<Pinetime::Controllers::DateTime::Days>(date::weekday(yearMonthDay).iso_encoding());
     
-    char ampm[2];
+    char ampm[3];
     
     auto hour = time.hours().count();
     // Convert 24 hour clock to 12 hour
-    ampm = "AM";
+    sprintf(ampm, "%s", "AM");
     if (hour >= 12) {
-      ampm = "PM";
+      sprintf(ampm, "%s", "PM");
       hour = hour - 12;
     }
     if (hour == 0) hour = 12;
