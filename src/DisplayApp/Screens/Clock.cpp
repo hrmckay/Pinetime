@@ -12,7 +12,8 @@ extern lv_font_t jetbrains_mono_extrabold_compressed;
 extern lv_font_t jetbrains_mono_bold_20;
 extern lv_style_t* LabelBigStyle;
 
-static lv_obj_t* dayofweekday;
+static lv_obj_t* dayofweekname;
+static lv_obj_t* ampmvalue;
 
 static void event_handler(lv_obj_t * obj, lv_event_t event) {
   Clock* screen = static_cast<Clock *>(obj->user_data);
@@ -32,7 +33,7 @@ Clock::Clock(DisplayApp* app,
 
   bleIcon = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_text(bleIcon, Symbols::bluetooth);
-  lv_obj_align(bleIcon, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, 20);
+  lv_obj_align(bleIcon, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, 0);
                                              
   batteryIcon = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_text(batteryIcon, "---%");
@@ -44,15 +45,19 @@ Clock::Clock(DisplayApp* app,
                                            
   label_date = lv_label_create(lv_scr_act(), NULL);
 
-  lv_obj_align(label_date, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, 20);
+  lv_obj_align(label_date, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, 0);
                                              
-  dayofweekday = lv_label_create(lv_scr_act(), NULL);
+  dayofweekname = lv_label_create(lv_scr_act(), NULL);
                                              
-  lv_obj_align(dayofweekday, lv_scr_act(), LV_ALIGN_IN_TOP_MID, 0, 0);                                           
+  lv_obj_align(dayofweekname, lv_scr_act(), LV_ALIGN_IN_TOP_MID, 0, 0);
+                                             
+  ampmvalue = lv_label_create(lv_scr_act(), NULL);
+                                             
+  lv_obj_align(ampmvalue, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, -10);                                           
 
   label_time = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_style(label_time, LV_LABEL_STYLE_MAIN, LabelBigStyle);
-  lv_obj_align(label_time, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, -40);
+  lv_obj_align(label_time, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, -60);
 
   backgroundLabel = lv_label_create(lv_scr_act(), NULL);
   backgroundLabel->user_data = this;
@@ -108,7 +113,7 @@ bool Clock::Refresh() {
       lv_label_set_text(bleIcon, BleIcon::GetIcon(false));
     }
   }
-  lv_obj_align(bleIcon, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, 20);
+  lv_obj_align(bleIcon, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, 0);
   lv_obj_align(batteryIcon, bleIcon, LV_ALIGN_OUT_RIGHT_MID, 0, 0);
   lv_obj_align(batteryPlug, batteryIcon, LV_ALIGN_OUT_RIGHT_MID, 0, 0); 
 
@@ -125,8 +130,20 @@ bool Clock::Refresh() {
     auto month = static_cast<Pinetime::Controllers::DateTime::Months>((unsigned)yearMonthDay.month());
     auto day = (unsigned)yearMonthDay.day();
     auto dayOfWeek = static_cast<Pinetime::Controllers::DateTime::Days>(date::weekday(yearMonthDay).iso_encoding());
-
+    
+    char ampm[2];
+    
     auto hour = time.hours().count();
+    // Convert 24 hour clock to 12 hour
+    ampm = "AM";
+    if (hour >= 12) {
+      ampm = "PM";
+      hour = hour - 12;
+    }
+    if (hour == 0) hour = 12;
+    lv_label_set_text(ampmvalue, ampm);
+    lv_obj_align(ampmvalue, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, -10);     
+    
     auto minute = time.minutes().count();
     auto second = time.seconds().count();
 
@@ -152,11 +169,11 @@ bool Clock::Refresh() {
       char dateStr[22];
       sprintf(dateStr, "%s %d", MonthToString(month), day);
       lv_label_set_text(label_date, dateStr);
-      lv_obj_align(label_date, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, 20);
+      lv_obj_align(label_date, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, 0);
       char weekdayStr[9];
       sprintf(weekdayStr, "%s", DayOfWeekToString(dayOfWeek));
-      lv_label_set_text(dayofweekday, weekdayStr);
-      lv_obj_align(dayofweekday, lv_scr_act(), LV_ALIGN_IN_TOP_MID, 0, 0); 
+      lv_label_set_text(dayofweekname, weekdayStr);
+      lv_obj_align(dayofweekname, lv_scr_act(), LV_ALIGN_IN_TOP_MID, 0, 0); 
 
       currentYear = year;
       currentMonth = month;
