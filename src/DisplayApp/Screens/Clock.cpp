@@ -53,11 +53,11 @@ Clock::Clock(DisplayApp* app,
                                              
   ampmvalue = lv_label_create(lv_scr_act(), NULL);
                                              
-  lv_obj_align(ampmvalue, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, -15);                                           
+  lv_obj_align(ampmvalue, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, -20);                                           
 
   label_time = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_style(label_time, LV_LABEL_STYLE_MAIN, LabelBigStyle);
-  lv_obj_align(label_time, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, -60);
+  lv_obj_align(label_time, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, -60);
 
   backgroundLabel = lv_label_create(lv_scr_act(), NULL);
   backgroundLabel->user_data = this;
@@ -142,7 +142,7 @@ bool Clock::Refresh() {
     }
     if (hour == 0) hour = 12;
     lv_label_set_text(ampmvalue, ampm);
-    lv_obj_align(ampmvalue, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, -15);     
+    lv_obj_align(ampmvalue, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, -20);     
     
     auto minute = time.minutes().count();
     auto second = time.seconds().count();
@@ -166,6 +166,8 @@ bool Clock::Refresh() {
       displayedChar[3] = minutesChar[1];
 
       lv_label_set_text(label_time, timeStr);
+      lv_obj_align(label_time, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, -60);
+      
     }
 
     if ((year != currentYear) || (month != currentMonth) || (dayOfWeek != currentDayOfWeek) || (day != currentDay)) {
