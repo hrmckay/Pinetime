@@ -68,6 +68,8 @@ Clock::Clock(DisplayApp* app,
   lv_obj_set_pos(backgroundLabel, 0, 0);
   lv_label_set_text(backgroundLabel, "");
 
+  /*
+  
   heartbeatIcon = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_text(heartbeatIcon, Symbols::heartBeat);
   lv_obj_align(heartbeatIcon, lv_scr_act(), LV_ALIGN_IN_BOTTOM_LEFT, 5, -2);
@@ -87,6 +89,8 @@ Clock::Clock(DisplayApp* app,
   stepIcon = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_text(stepIcon, Symbols::shoe);
   lv_obj_align(stepIcon, stepValue, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+  
+  */
 }
 
 Clock::~Clock() {
@@ -187,6 +191,8 @@ bool Clock::Refresh() {
     }
   }
 
+  /*  
+  
   // TODO heartbeat = heartBeatController.GetValue();
   if(heartbeat.IsUpdated()) {
     char heartbeatBuffer[4];
@@ -205,6 +211,8 @@ bool Clock::Refresh() {
     lv_obj_align(stepValue, lv_scr_act(), LV_ALIGN_IN_BOTTOM_RIGHT, -5, -2);
     lv_obj_align(stepIcon, stepValue, LV_ALIGN_OUT_LEFT_MID, -5, 0);
   }
+  
+  */
 
   return running;
 }
