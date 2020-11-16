@@ -154,7 +154,10 @@ bool Clock::Refresh() {
     sprintf(hoursChar, "%02d", hour);
 
     char timeStr[6];
-    sprintf(timeStr, "%c%c:%c%c", hoursChar[0],hoursChar[1],minutesChar[0], minutesChar[1]);
+    char highorderdigit;
+    if (hour > 9) highorderdigit = hoursChar[0];
+    else highorderdigit = " ";
+    sprintf(timeStr, "%c%c:%c%c", highorderdigit,hoursChar[1],minutesChar[0], minutesChar[1]);
 
     if(hoursChar[0] != displayedChar[0] || hoursChar[1] != displayedChar[1] || minutesChar[0] != displayedChar[2] || minutesChar[1] != displayedChar[3]) {
       displayedChar[0] = hoursChar[0];
